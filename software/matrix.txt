@@ -1,0 +1,19 @@
+		col 1			col 2 			col 3			col 4 			col 5 			col 6 			col 7 			col 8			col 9 			col 10
+row 1 	KEY_PAGE_DOWN 	KEY_PAGE_UP 	KEY_INSERT		KEY_DELETE 		KEY_HOME 		KEY_END 		KEY_RIGHT 		KEY_DOWN 		KEY_LEFT	 	KEY_UP				pin 11 (25)
+row 2 	KEY_CAPS		KEY_LEFT_SHIFT	KEY_LEFT_CTRL	KEY_LEFT_ALT	KEY_LEFT_GUI	KEY_RIGHT_GUI	KEY_RIGHT_ALT	KEY_RIGHT_CTRL	KEY_F24			KEY_RIGHT_SHIFT		pin 10 (24)
+row 3	KEY_TAB 		KEY_TILDE 		KEY_A 			KEY_Z 			KEY_X 			KEY_SPACE 		KEY_COMMA		KEY_PERIOD		KEY_SLASH		KEY_ENTER			pin 09
+row 4	KEY_BACKSLASH	KEY_Q			KEY_S			KEY_D			KEY_C			KEY_V			KEY_M			KEY_L			KEY_SEMICOLON	KEY_QUOTE			pin 08
+row 5	KEY_F3			KEY_1			KEY_W			KEY_E			KEY_F			KEY_B			KEY_N			KEY_K			KEY_LEFT_BRACE	KEY_RIGHT_BRACE		pin 07
+row 6	KEY_F4			KEY_2			KEY_3			KEY_R			KEY_G			KEY_H			KEY_J			KEY_P			KEY_EQUAL		KEY_BACKSPACE		pin 06
+row 7	KEY_F5			KEY_4			KEY_5			KEY_T			KEY_Y			KEY_U			KEY_I			KEY_O			KEY_MINUS		KEY_F11				pin 05
+row 8	KEY_F6			KEY_F7			KEY_6			KEY_7			KEY_F8			KEY_8			KEY_9			KEY_F9			KEY_0			KEY_F10				pin 04
+row 9	KEY_F1			KEY_F2			KEYPAD_MINUS	KEYPAD_PLUS		KEYPAD_ENTER	KEYPAD_SLASH	KEYPAD_8		KEYPAD_5		KEYPAD_2		KEYPAD_0			pin 03
+row 10	KEYPAD_ASTERIX	KEYPAD_9		KEYPAD_6		KEYPAD_3		KEYPAD_PERIOD	KEY_ESC			KEY_NUM_LOCK	KEYPAD_7		KEYPAD_4		KEYPAD_1			pin 02
+		pin 14			pin 15			pin 16			pin 17			pin 18			pin 19			pin 20			pin 21			pin 22			pin 23
+
+row 11	KEY_F12 (connected directly to ground)	pin 01
+
+row 1 thru 11 = pins 11 thru 01
+col 1 thru 10 = pins 14 thru 23
+
+aweffdgjhiodfghhghgggggggggggghghghghghghghghghghghghghghghghghghghghghghghghghghhjhjhjhjhjhjhjhjhjhjhjhkjkjkjkjkjkjkjkjkjkjkjkjlklklklkklklklklklklklklklklklklkkkkkkklklklklkklkkkllklklklksgr oigsor;o  gkklk;sdfgk''oserbxf  oreshg
