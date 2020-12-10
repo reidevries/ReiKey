@@ -1,10 +1,10 @@
 # ReiKey
 ![DIY Keyboard custom design](https://raw.githubusercontent.com/reidevries/ReiKey/main/hardware/reik.png)
 
-This is a plateless PCB-based mechanical keyboard inspired by [JayK](https://github.com/josuegaleas/JayK) and [ONO-SENDAI MATRIX 83](https://imgur.com/a/v5pzh#FiXKcm0) as well as the Amiga 500 keyboard layout. I've been using it as my main keyboard for a while and it works pretty well!
+This is a plateless PCB-based mechanical keyboard inspired by [JayK](https://github.com/josuegaleas/JayK) and [ONO-SENDAI MATRIX 83](https://imgur.com/a/v5pzh#FiXKcm0) as well as the Amiga 500 keyboard layout. I specifically designed it not to require multiple layers, but you could easily add another layer if you want media keys or whatever. I've been using it as my main keyboard for a while and it works pretty well!
 
 ## Layout:
-I used a highly customized 101 key layout, it is almost impossible to find full keycap sets to fit this layout. The numpad is on the left, which I find to be more ergonomic when using the arrow keys or mouse for data entry. The left modifier keys are extended over in the unix style. The backslash key is where the tilde key and the caps lock key is 1.25u to make space for the tilde key. I scrapped the printscreen, pause and scroll lock keys because I never use them. 
+I used a highly customized 101 key layout, it is almost impossible to find full keycap sets to fit this layout. The numpad is on the left, which I find to be more ergonomic when using the arrow keys or mouse for data entry. The left modifier keys are extended over in the unix style. The backslash key is where the tilde key and the caps lock key is 1.25u to make space for the tilde key. I scrapped the printscreen, pause and scroll lock keys because I never use them, and added a specific key for opening a terminal emulator in Linux, which could be easily reprogrammed to act as a FN key if desired.
 
 ## Hardware Design:
 The PCB is intended to be sandwiched between two pieces of wood (or any material really), a top 5mm one with a cutout in the middle for all the keys, and a bottom one with a cutout for the Teensy LC. Eight M3 screws hold the pieces together. This way it is much simpler to make as a DIY project because it doesn't require costly plate manufacturing and the switches can be easily desoldered and resoldered.
