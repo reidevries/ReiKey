@@ -1,0 +1,12 @@
+	01		02		03		04		05		06		07		08		09		10
+01	PgDn	PgUp	Insert	Delete	Home	End		Right	Down	Left	Up
+02	Caps	lshf	lctrl	lalt	lcmd	rcmd	ralt	rctrl	term	rshf
+03	tab		Aa		tilde	Zz		Xx		space	comma	dot		slsh	enter
+04	bkslsh	Qq		Ss		Dd		Cc		Vv		Mm		Ll		colon	quote
+05	F3		one		Ww		Ee		Ff		Bb		Nn		Kk		lbrace	rbrace
+06	F4		two		three	Rr		Gg		Hh		Jj		Pp		equals	bkspace
+07	F5		four	five	Tt		Yy		Uu		Ii		Oo		minus	F11
+08	F6		F7		six		seven	F8		eight	nine	F9		zero	F10
+09	F1		F2		minus	plus	enter	div		eight	five	two		zero
+10	mult	nine	six		three	dot		esc		numlk	seven	four	one
+11	F12
