@@ -9,6 +9,10 @@ I used a highly customized 101 key layout, it is almost impossible to find full 
 ## Hardware Design:
 The PCB is intended to be sandwiched between two pieces of wood (or any material really), a top 5mm one with a cutout in the middle for all the keys, and a bottom one with a cutout for the Teensy LC. Eight M3 screws hold the pieces together. This way it is much simpler to make as a DIY project because it doesn't require costly plate manufacturing and the switches can be easily desoldered and resoldered.
 
+## PCB:
+The PCB is made in Kicad and requires [keebs.pretty](https://github.com/egladman/keebs.pretty) for the keyboard footprints. I had to make a custom footprint for the ""bigass"" enter key.
+It also requires the teensy [symbol](https://github.com/XenGi/teensy_library) and [footprint](https://github.com/XenGi/teensy.pretty) libraries from github user XenGi.
+
 ## Electronic Design:
 It has a 10x10 keyboard matrix with the F12 key going directly to ground. The only LEDs are under the caps lock and num lock keys, and a power LED above the arrow keys. It uses a Teensy LC as the microcontroller.
 
