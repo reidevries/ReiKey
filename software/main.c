@@ -170,12 +170,12 @@
 #define CAP_LED 12
 
 // keyboard drives thru cols and reads thru rows
-#define PIN_F12  1
+#define PIN_R11  1
 int ROWS[] = { 25, 24,  9,  8,  7,  6,  5,  4,  3,  2 };
 int COLS[] = { 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 };
 
 uint16_t key_matrix[10][10] = {
-	{ KEY_PAGE_DOWN, KEY_PAGE_UP, KEY_INSERT, KEY_DELETE, KEY_HOME, 
+	{ KEY_PAGE_DOWN, KEY_PAGE_UP, KEY_ESC, KEY_INSERT, KEY_HOME, 
 		KEY_END, KEY_RIGHT, KEY_DOWN, KEY_LEFT, KEY_UP },
 	{ KEY_CAPS_LOCK, KEY_LEFT_SHIFT, KEY_LEFT_CTRL, KEY_LEFT_ALT,
 		KEY_LEFT_GUI, KEY_RIGHT_GUI, KEY_RIGHT_ALT, KEY_RIGHT_CTRL,
@@ -184,18 +184,18 @@ uint16_t key_matrix[10][10] = {
 		KEY_PERIOD, KEY_SLASH, KEY_ENTER },
 	{ KEY_BACKSLASH, KEY_Q, KEY_S, KEY_D, KEY_C, 
 		KEY_V, KEY_M, KEY_L, KEY_SEMICOLON, KEY_QUOTE },
-	{ KEY_F3, KEY_1, KEY_W, KEY_E, KEY_F,
+	{ KEY_F4, KEY_1, KEY_W, KEY_E, KEY_F,
 		KEY_B, KEY_N, KEY_K, KEY_LEFT_BRACE, KEY_RIGHT_BRACE },
-	{ KEY_F4, KEY_2, KEY_3, KEY_R, KEY_G,
+	{ KEY_F5, KEY_2, KEY_3, KEY_R, KEY_G,
 		KEY_H, KEY_J, KEY_P, KEY_EQUAL, KEY_BACKSPACE },
-	{ KEY_F5, KEY_4, KEY_5, KEY_T, KEY_Y,
-		KEY_U, KEY_I, KEY_O, KEY_MINUS, KEY_F11 },
-	{ KEY_F6, KEY_F7, KEY_6, KEY_7, KEY_F8,
-		KEY_8, KEY_9, KEY_F9, KEY_0, KEY_F10 },
-	{ KEY_F1, KEY_F2, KEYPAD_MINUS, KEYPAD_PLUS, KEYPAD_ENTER,
+	{ KEY_F6, KEY_4, KEY_5, KEY_T, KEY_Y,
+		KEY_U, KEY_I, KEY_O, KEY_MINUS, KEY_F12 },
+	{ KEY_F7, KEY_F8, KEY_6, KEY_7, KEY_F9,
+		KEY_8, KEY_9, KEY_F10, KEY_0, KEY_F11 },
+	{ KEY_F2, KEY_F3, KEYPAD_MINUS, KEYPAD_PLUS, KEYPAD_ENTER,
 		KEYPAD_SLASH, KEYPAD_8, KEYPAD_5, KEYPAD_2, KEYPAD_0 },
 	{ KEYPAD_ASTERIX, KEYPAD_9, KEYPAD_6, KEYPAD_3, KEYPAD_PERIOD,
-		KEY_ESC, KEY_NUM_LOCK, KEYPAD_7, KEYPAD_4, KEYPAD_1}
+		KEY_F1, KEY_NUM_LOCK, KEYPAD_7, KEYPAD_4, KEYPAD_1}
 };
 
 int held[10][10] = {
@@ -210,7 +210,7 @@ int held[10][10] = {
   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 };
-int held_F12 = 0;
+int held_R11 = 0;
 
 //checks if a button on a given pin has been pressed or released
 #define PRESSED 2
@@ -259,7 +259,7 @@ int main(void)
 	// set up pins to the correct modes
 	pinMode(NUM_LED, OUTPUT);
 	pinMode(CAP_LED, OUTPUT);
-	pinMode(PIN_F12, INPUT_PULLUP);
+	pinMode(PIN_R11, INPUT_PULLUP);
 	for (int i = 0; i < 10; ++i) {
 		pinMode(ROWS[i], INPUT_PULLUP);
 	}
@@ -276,19 +276,19 @@ int main(void)
 		//set up the current column
 		setupCol(col);
 		// delay to avoid retriggering and up arrow triggering page down
-		delayMicroseconds(200);
+		delayMicroseconds(500);
 	
 		//check each row in the column for key presses
 		for (int row = 0; row < 10; ++row) {
 			checkKey(row, col);
 		}
 
-		//manually check F12 as it is always grounded
-		int status = checkPin(PIN_F12, &held_F12);
+		//manually check row 11 as it is always grounded
+		int status = checkPin(PIN_R11, &held_R11);
 		if (status == PRESSED) {
-			usb_keyboard_press_keycode(KEY_F12);
+			usb_keyboard_press_keycode(KEY_DELETE);
 		} else if (status == RELEASED) {
-			usb_keyboard_release_keycode(KEY_F12);
+			usb_keyboard_release_keycode(KEY_DELETE);
 		}
 		col = (col+1)%10;
 	}
