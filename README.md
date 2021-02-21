@@ -1,5 +1,5 @@
 # ReiKey
-![DIY Keyboard custom design](https://raw.githubusercontent.com/reidevries/ReiKey/main/hardware/reik.png)
+![DIY Keyboard custom design](https://raw.githubusercontent.com/reidevries/ReiKey/main/reikey.png)
 
 This is a plateless PCB-based mechanical keyboard inspired by [JayK](https://github.com/josuegaleas/JayK) and [ONO-SENDAI MATRIX 83](https://imgur.com/a/v5pzh#FiXKcm0) as well as the Amiga 500 keyboard layout. I specifically designed it not to require multiple layers, but you could easily add another layer if you want media keys or whatever. I've been using it as my main keyboard for a while and it works pretty well!
 
