@@ -31,6 +31,7 @@ If you want to custom-design a keycap set to fit this keyboard, you will need to
 * Dual 2.75U shift keys
 * Dual 1.5U control keys
 * One 1.5U command key and one 1.25U command key
+
 It's relatively easy to find 1.5U blanks so I'd consider them less important to include as they will add a lot of cost to a regular keycap set. But if you want, the required 1.5U keys include F1 to F12, Delete, Insert, Escape, Page Up, Page Down, Home, and End
 
 ## PCB:
