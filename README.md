@@ -25,12 +25,12 @@ It has a 10x10 keyboard matrix with the delete key going directly to ground. The
 I succesfully built this keyboard and have been using it as my daily driver for several months now. The most difficult part was finding keycaps for the unusual layout. First, I ordered a full DSA keycap set which had a "bigass" enter key included; it was quite difficult to find this type of enter key in DSA. Then I ordered about 24 blank 1.5U keys in colours that complemented the initial keycap set, and 4 blank 2.75U keys for the dual 2.75U shifts. Then for the Tab and Command keys, I ordered some custom-printed individual DSA keycaps from signature plastics for 5 dollars each. I was easily able to find a key with an LED hole for the numlock key, but I still haven't found one suitable for the 1.25U capslock. I would highly recommend using DSA keycaps as it has the same profile for every row, unlike all other key profiles like DCS, OEM, SA etc. 
 
 If you want to custom-design a keycap set to fit this keyboard, you will need to include at least:
--"bigass" enter key
--2U Tab
--1.25U caps lock, preferrably with some way for the LED to shine through it.
--Dual 2.75U shift keys
--Dual 1.5U control keys
--One 1.5U command key and one 1.25U command key
+* "bigass" enter key
+* 2U Tab
+* 1.25U caps lock, preferrably with some way for the LED to shine through it.
+* Dual 2.75U shift keys
+* Dual 1.5U control keys
+* One 1.5U command key and one 1.25U command key
 It's relatively easy to find 1.5U blanks so I'd consider them less important to include as they will add a lot of cost to a regular keycap set. But if you want, the required 1.5U keys include F1 to F12, Delete, Insert, Escape, Page Up, Page Down, Home, and End
 
 ## PCB:
