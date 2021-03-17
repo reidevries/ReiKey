@@ -33,7 +33,7 @@ int held[10][10] = {
 };
 int held_R11 = 0;
 
-uint8_t checkPin(int pin, int* held)
+uint8_t checkPin(const int pin, int* const held)
 {
 	int val = digitalRead(pin);
 	if (val == LOW && *held == 0) {
@@ -48,9 +48,9 @@ uint8_t checkPin(int pin, int* held)
 
 //checks if a button at a given row and column in the key matrix has been
 //pressed or released, and sends the matching keycode via usb
-void checkKey(int row, int col)
+void checkKey(const int row, const int col)
 {
-	uint8_t status = checkPin(ROWS[row], &held[row][col]);
+	const uint8_t status = checkPin(ROWS[row], &held[row][col]);
 	if (status == PRESSED) {
 		usb_keyboard_press_keycode(key_matrix[row][col]);
 	} else if (status == RELEASED) {
@@ -59,7 +59,7 @@ void checkKey(int row, int col)
 }
 
 //sets a given column index to ground, and the rest to Hi-Z
-void setupCol(int col)
+void setupCol(const int col)
 {
 	for (int i = 0; i < col; ++i) {
 		pinMode(COLS[i], INPUT);
