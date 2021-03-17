@@ -50,11 +50,14 @@ uint8_t checkPin(const int pin, int* const held)
 //pressed or released, and sends the matching keycode via usb
 void checkKey(const int row, const int col)
 {
-	const uint8_t status = checkPin(ROWS[row], &held[row][col]);
-	if (status == PRESSED) {
+	switch (checkPin(ROWS[row], &held[row][col])) {
+	case PRESSED:
 		usb_keyboard_press_keycode(key_matrix[row][col]);
-	} else if (status == RELEASED) {
+		break;
+	case RELEASED:
 		usb_keyboard_release_keycode(key_matrix[row][col]);
+		break;
+	default: break;
 	}
 }
 
@@ -102,11 +105,13 @@ int main(void)
 		}
 
 		//manually check row 11 as it is always grounded
-		int status = checkPin(PIN_R11, &held_R11);
-		if (status == PRESSED) {
-			usb_keyboard_press_keycode(KEY_DELETE);
-		} else if (status == RELEASED) {
-			usb_keyboard_release_keycode(KEY_DELETE);
+		switch (checkPin(PIN_R11, &held_R11)) {
+		case PRESSED:
+			usb_keyboard_press_keycode(PIN_R11_KEY);
+			break;
+		case RELEASED:
+			usb_keyboard_release_keycode(PIN_R11_KEY);
+		default: break;
 		}
 		col = (col+1)%10;
 	}
